@@ -45,12 +45,6 @@ _start:
     mov al, 10
     call putchar
     
-    ; Producto escalar
-    mov ebx, vector1
-    mov edx, vector2
-    call productoEscalar
-    
-    ; Mostramos resultado
     mov edx, msgProductoResultado
     call puts
     call pHex_dw
@@ -158,8 +152,7 @@ pe_dot_loop:
     mov dl, [edi]        
     
     mov eax, edx
-    mul ebx
-    ;imul ebx, edx        
+    mul ebx       
     add eax, ebx        
     
     inc esi              
