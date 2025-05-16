@@ -14,13 +14,13 @@ pBin16b:
     movzx eax, bh           
     push eax
     call pBin8b
-    add esp, 4             
+    pop eax           
 
 
     movzx eax, bl           
     push eax
     call pBin8b
-    add esp, 4              
+    pop eax            
 
     pop ebx
     pop ebp
